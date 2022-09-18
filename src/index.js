@@ -6,9 +6,7 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter
-      basename="/goit-react-hw-05-movies/"
-    >
+    <BrowserRouter basename="/mark4titan.github.io/">
       <App />
     </BrowserRouter>
   </React.StrictMode>
