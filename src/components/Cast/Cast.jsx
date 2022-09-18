@@ -13,13 +13,9 @@ export const Cast = () => {
   useEffect(() => {
     (async function () {
       try {
-        // handle success
         const respone = await getMoviesCast({ id });
-        setFetchedData(respone.data); // .cast
-        // return axios.get(queryString);
+        setFetchedData(respone.data);
       } catch (error) {
-        // handle error
-        // return `error with your query ${error} `;
         setFetchedError(`  ${error.message}  `);
       }
     })();
@@ -32,11 +28,11 @@ export const Cast = () => {
           <img
             src={
               profile_path === null
-                ? `https://via.placeholder.com/64x96`
+                ? `https://via.placeholder.com/320`
                 : `https://image.tmdb.org/t/p/w500${profile_path}`
             }
             alt={fetchedData.cast.id}
-            width="64"
+            width="164"
           />
           <p>{name}</p> <p>character: {character} </p>
         </div>

@@ -22,16 +22,12 @@ export const Movies = () => {
     (async function () {
       if (!query) return;
       try {
-        // handle success
         const respone = await getMoviesList({ query });
         setFetchedData(respone.data.results);
         setFetchedError(null);
-        // return axios.get(queryString);
       } catch (error) {
-        // handle error
         setFetchedError(`error with your query ${error.message} `);
         setFetchedData(null);
-        // return `error with your query ${error} `;
       }
     })();
   }, [query, searchParams]);

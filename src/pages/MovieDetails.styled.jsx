@@ -8,23 +8,19 @@ export const Container = styled('div')`
 
 export const Info = styled('div')`
   padding: 16px;
-  padding: ${props => props.theme.spacing(4)};
   background-color: '#07c';
 `;
 
 export const GoBack = styled(NavLink)`
+  border: solid 1px black;
   display: inline-flex;
   margin: 8px;
   align-items: center;
   justify-content: center;
-  padding: ${props => props.theme.spacing(3)};
-  color: ${props => props.theme.palette.common.white};
-  background-color: ${props => props.theme.palette.secondary.light};
   text-decoration: none;
   font-size: 2em;
-  border-radius: 15px;
-
-  &:hover {
-    background-color: ${props => props.theme.palette.secondary.dark};
-  }
+  border-radius: 5px;
+  background-color: darkgray;
+  padding: 5px;
+  color: black;
 `;

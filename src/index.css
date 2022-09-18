@@ -7,9 +7,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: grid;
+  justify-content: center;
+  background-color: dimgrey;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%),
+    0 2px 1px -1px rgb(0 0 0 / 12%);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1{
+color: rgb(0, 0, 0);
+  justify-content: center;
+  display: grid;
 }

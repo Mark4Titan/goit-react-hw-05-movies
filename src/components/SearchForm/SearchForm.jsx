@@ -15,7 +15,6 @@ export const SearchForm = ({ onSubmit }) => {
   } = useForm();
 
   useEffect(() => {
-    //
     reset();
   }, [reset]);
 
@@ -25,20 +24,21 @@ export const SearchForm = ({ onSubmit }) => {
   };
 
   return (
-    /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-    <SC.Form onSubmit={handleSubmit(submitSearch)}>
-      {errors.searchString && <span>This field is required</span>}
-      <TextField
-        id="filled-basic"
-        label="Required"
-        variant="filled"
-        {...register('searchString', { required: true })}
-      />
+    <>
+      <SC.Form onSubmit={handleSubmit(submitSearch)}>
+        {errors.searchString && <span>This field is required</span>}
+        <TextField
+          id="filled-basic"
+          label="Required"
+          variant="filled"
+          {...register('searchString', { required: true })}
+        />
 
-      <Button type="submit" variant="contained">
-        Search movies
-      </Button>
-    </SC.Form>
+        <Button type="submit" variant="contained">
+          Search movies
+        </Button>
+      </SC.Form>
+    </>
   );
 };
 SearchForm.propTypes = {

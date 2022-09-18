@@ -6,7 +6,6 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 //
 import { getMoviesInfo } from 'api/api';
-// import { Container } from './MovieDetails.styled';
 import * as SC from './MovieDetails.styled';
 //
 export const MovieDetails = () => {
@@ -16,7 +15,6 @@ export const MovieDetails = () => {
   const [fetchedError, setFetchedError] = useState(null);
 
   const location = useLocation();
-  // console.log('details .....', location);
   const { state } = location;
 
   useEffect(() => {
@@ -24,21 +22,16 @@ export const MovieDetails = () => {
 
     (async function () {
       try {
-        // handle success
         const respone = await getMoviesInfo({ id });
         setFetchedData(respone.data);
         setFetchedError(null);
-        // return axios.get(queryString);
       } catch (error) {
-        // handle error
         setFetchedError(`error with your query ${error.message} `);
         setFetchedData(null);
-        // return `error with your query ${error} `;
       }
     })();
   }, [id]);
 
-  // console.log('  where to back  ', location.state);
   return (
     <main>
       {fetchedData && (

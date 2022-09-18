@@ -14,13 +14,9 @@ export const Reviews = () => {
   useEffect(() => {
     (async function () {
       try {
-        // handle success
         const respone = await getMoviesReview({ id, language: 'en-US' });
-        setFetchedData(respone.data); // .cast
-        // return axios.get(queryString);
+        setFetchedData(respone.data);
       } catch (error) {
-        // handle error
-        // return `error with your query ${error} `;
         setFetchedError(`  ${error.message}  `);
       }
     })();

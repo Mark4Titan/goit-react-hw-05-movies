@@ -8,8 +8,8 @@ export const SharedLayout = () => {
     <>
       <SC.StyledHeader>
         <SC.StyledNav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/movies">Movies</NavLink>
+          <NavLink to="/goit-react-hw-05-movies/">Home</NavLink>
+          <NavLink to="/movies"> Movies</NavLink>
         </SC.StyledNav>
       </SC.StyledHeader>
       <Suspense fallback={<div>Loading...</div>}>
@@ -18,5 +18,3 @@ export const SharedLayout = () => {
     </>
   );
 };
-
-// export default SharedLayout;

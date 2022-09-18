@@ -2,11 +2,13 @@ import styled from 'styled-components';
 
 export const StyledNav = styled('nav')`
   display: flex;
-  justify-content: center;
-  gap: ${props => props.theme.spacing(5)}; ;
+  flex-wrap: nowrap;
+  padding: 10px;
+  justify-content: space-between;
+  font-size: 30px;
+  padding: 10px 60px;
+  background: darkgrey;
 `;
-//
 export const StyledHeader = styled('header')`
   background-color: lightgray;
-  padding: ${props => props.theme.spacing(3, 4)};
 `;
