@@ -8,7 +8,7 @@ export const SharedLayout = () => {
     <>
       <SC.StyledHeader>
         <SC.StyledNav>
-          <NavLink to="/goit-react-hw-05-movies/">Home</NavLink>
+          <NavLink to="//">Home</NavLink>
           <NavLink to="/movies"> Movies</NavLink>
         </SC.StyledNav>
       </SC.StyledHeader>
